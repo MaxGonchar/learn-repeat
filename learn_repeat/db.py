@@ -1,16 +1,19 @@
 import pickle
 
 
-class Db:
-
-    def read(self):
+def read():
+    try:
         with open('../data.pkl', 'rb') as file:
             data = pickle.load(file)
         return data
+    except FileNotFoundError:
+        return None
 
-    def write(self, data):
-        with open('../data.pkl', 'wb') as file:
-            pickle.dump(data, file)
 
-    def delete(self):
-        pass
+def write(data):
+    with open('../data.pkl', 'wb') as file:
+        pickle.dump(data, file)
+
+
+def delete():
+    pass
