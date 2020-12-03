@@ -9,3 +9,4 @@ __pycache__
 
 # db file
 /data.pkl
+/error_log.txt
